@@ -2,6 +2,13 @@ import Head from 'next/head'
 import Header from '@components/Header'
 
 export default function Home() {
+  const endpoints = [
+    "GET /api/recipes/:itemname",
+    "GET /api/basics",
+    "GET /api/defense",
+    "GET /api/mechanisms",
+    "GET /api/tools"
+  ]
   return (
     <div className="container">
       <Head>
@@ -14,6 +21,9 @@ export default function Home() {
         <p className="description">
           some *quick* endpoints written by lindsay for her netlify interview :eyes:
         </p>
+        <ul>
+          {endpoints.map(endpoint => <li key={endpoint}>{endpoint}</li>)}
+        </ul>
       </main>
 
       <style jsx>{`

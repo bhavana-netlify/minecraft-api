@@ -1,7 +1,7 @@
 import data from "data.js";
 
 export default (req, res) => {
-  const { mechanisms } = data
+  const { basics } = data
   res.statusCode = 200
-  res.json(mechanisms)
+  res.json(basics)
 }

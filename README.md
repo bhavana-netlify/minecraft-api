@@ -1,22 +1,40 @@
 # a very smol minecraft info api
 
-
 ### Recipes
 
 ```sh
 GET /api/recipes/:itemname
 ```
 
-Supported items by name:
+Returns JSON
+```json
+{ recipe: [ requested_item_recipe ] }
+```
 
-- bed
-- crafting_table
+### Lists
 
+Returns an array of strings representing item names of that category
 
-Outputs/returns a 3x3 grid representing the recipe, for example:
+Basic Items
 
 ```sh
-[     ] [     ] [     ]
-[plank] [plank] [     ]
-[plank] [plank] [     ]
+GET /api/basics
+```
+
+Defense Items
+
+```sh
+GET /api/defense
+```
+
+Mechanisms
+
+```sh
+GET /api/mechanisms
+```
+
+Tools
+
+```sh
+GET /api/tools
 ```

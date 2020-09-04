@@ -1,4 +1,4 @@
-import data from "../../../data.js";
+import data from "data.js";
 
 export default (req, res) => {
   const {
@@ -10,7 +10,7 @@ export default (req, res) => {
 
   if (!recipe) {
     res.statusCode = 400
-    res.send("error")
+    res.send("error: no recipe found")
   } else {
     res.statusCode = 200
     res.json({ recipe })
